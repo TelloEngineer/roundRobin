@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.material-symbols-outlined {
+    color: aliceblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: black;
+}
+
+/* ---- header ---- */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, .2);
+}
+
+
+.logo img {
+    width: 80px;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    color: #f7f097fd;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+
+    #back-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    .header {
+        background-color: none;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .5);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .10);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 3.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        height: 3.5rem;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        background: #d4d115fd;
+        transition: .5s;
+        font-weight: 500;
+        margin-left: 1.5rem;
+    }
+
+    #back-image {
+        width: auto;
+        height: auto;
+    }
+
+
+}
+
+/* --- Main.visual -- */
+
+main,
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+div.site-wrapper {
+    /* section */
+    background: #75741c;
+    height: 100%;
+}
+
+main.visual {
+    /* container */
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+/* --- Overview Section --- */
+
+section.overview {
+    /* content-section */
+    background: url(images/overview.png) no-repeat;
+    display: flex;
+
+    background-color: #423f0d;
+    /* Used if the image is unavailable */
+    height: 100vh;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+
+section.overview div.image {
+    float: right;
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+
+section.overview div.image img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+section.overview .content-wrapper {
+    height: max-content;
+    float: center;
+    width: 60%;
+    margin: auto;
+}
+
+section.overview .content-wrapper #title {
+    color: #E67E22;
+    text-align: center;
+}
+
+section.overview .content-wrapper #content {
+    color: #E59866;
+    text-align: center;
+}
+
+
+
+/* --- Projects Section --- */
+section.projects {
+    /* content-section */
+    display: flex;
+
+    
+    background:  url("images/sushi.png");
+    /* Used if the image is unavailable */
+    height: 100vh;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+
+
+section.projects .content-wrapper {
+    height: max-content;
+    float: center;
+    width: 60%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px 20px;
+}
+
+section.projects .content-wrapper #title {
+    color: #770909;
+    text-align: center;
+}
+
+section.projects .content-wrapper #content {
+    color: #f55a5a;
+    text-align: center;
+}
+
+section.projects .content-wrapper a:visited, section.projects .content-wrapper a {
+    color: #81d83a;
+}
+
+/* -- project-witch */
+section.project-witch {
+    /* content-section */
+    display: flex;
+
+    
+    background: url("images/projects.png");
+    /* Used if the image is unavailable */
+    height: 100vh;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+
+section.project-witch .content-wrapper {
+    height: max-content;
+    float: center;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px 20px;
+    margin: auto;
+}
+
+section.project-witch .content-wrapper #title {
+    color: #ffdc18;
+    text-align: center;
+}
+
+section.project-witch .content-wrapper #content {
+    color: #b0b31a;
+    text-align: center;
+}
+
+/* --- footer --- */
+footer.info {
+    position: absolute;
+    width: 100%;
+    height: 3.5rem;
+    background: #6b6a5e;
+    color: #770909;
+}
+
+footer.info a,footer.info a:visited{
+    color:#b4b62e
+}
+
+/* --- Global --- */
+a{
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+
+a:visited, a{
+color: #437a16;
+}
